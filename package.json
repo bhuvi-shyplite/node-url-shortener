@@ -33,7 +33,7 @@
     "rest"
   ],
   "scripts": {
-    "dev": "node app -p=3002 --redis-host=\"192.168.1.110\" --redis-db=8",
+    "dev": "nodemon app -p=3002 --redis-host=\"192.168.1.110\" --redis-db=8",
     "start": "forever start /home/ubuntu/nus/app.js --port=3002",
     "restart": "forever restart /home/ubuntu/nus/app.js --port=3002",
     "test": "mocha"

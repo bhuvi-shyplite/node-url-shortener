@@ -39,7 +39,7 @@ module.exports = function (app, nus) {
           startDate = reply.start_date || 0;
           endDate = reply.end_date || 0;
           toDay = new Date();
-          if((+startDate - +toDay) > 0 || (+endDate - +toDay) < 0 ){
+          if((+startDate - +toDay) > 0 || (endDate != 0 && (+endDate - +toDay) < 0) ){
             err = {"error" : "sorry this url has expired"};
             jsonResponse(res, 200, err);
           }else{
